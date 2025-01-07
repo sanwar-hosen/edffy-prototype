@@ -1,11 +1,10 @@
-import React from 'react';
-import Navbar from '../components/Navbar/Navbar.jsx';
+import React from "react";
+import Navbar from './Components/Navbar/Navbar';
+
 const home = () => {
-  return (
-    <>
-    <Navbar></Navbar>
-    </>
-  );
+	return <>
+  <Navbar></Navbar>
+  </>;
 };
 
 export default home;

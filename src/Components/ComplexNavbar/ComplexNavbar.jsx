@@ -25,7 +25,8 @@ import {
 	RocketLaunchIcon,
 	Bars2Icon,
 } from "@heroicons/react/24/solid";
-import { NavLink, Link } from "react-router";
+import { NavLink } from "react-router";
+import { LoginButton } from "../LoginButton/LoginButton";
 // profile menu component
 const profileMenuItems = [
 	{
@@ -61,7 +62,7 @@ function ProfileMenu() {
 				<Button
 					variant="text"
 					color="blue-gray"
-					className="flex items-center gap-1 rounded-full py-0.5 pr-0.5 pl-0.5 "
+					className="flex items-center gap-1 rounded-full py-0.5 pr-0.5 pl-0.5 drop-shadow-lg "
 				>
 					<Avatar
 						variant="circular"
@@ -72,14 +73,14 @@ function ProfileMenu() {
 					/>
 				</Button>
 			</MenuHandler>
-			<MenuList className="p-1">
+			<MenuList className="p-1 ">
 				{profileMenuItems.map(({ label, icon }, key) => {
 					const isLastItem = key === profileMenuItems.length - 1;
 					return (
 						<MenuItem
 							key={label}
 							onClick={closeMenu}
-							className={`flex items-center gap-2 rounded ${
+							className={`flex hover:shadow-purple-300 hover:shadow-md items-center gap-2 rounded ${
 								isLastItem
 									? "hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
 									: ""
@@ -150,7 +151,7 @@ function NavListMenu() {
 		<React.Fragment>
 			<Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
 				<MenuHandler>
-					<Typography as="a" href="#" variant="small" className="">
+					<Typography as="a" href="#" variant="small" className="hover:drop-shadow-purple-glow">
 						<MenuItem className="hidden items-center gap-2 font-bold text-blue-gray-900 lg:flex lg:rounded-full">
 							<Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />
 							<Typography variant="small" className="font-bold">
@@ -172,10 +173,11 @@ function NavListMenu() {
 						shadow={false}
 						variant="gradient"
 						className="col-span-3 grid h-full w-full place-items-center rounded-md"
+						
 					>
 						<RocketLaunchIcon
 							strokeWidth={1}
-							className="h-28 w-28"
+							className="h-28 w-28 animate-spin-horizontal hover:animate-none hover:drop-shadow-purple-glow"
 						/>
 					</Card>
 					<ul className="col-span-4 flex w-full flex-col gap-1">
@@ -183,7 +185,7 @@ function NavListMenu() {
 					</ul>
 				</MenuList>
 			</Menu>
-			<MenuItem className="flex items-center gap-2 font-medium text-blue-gray-900 lg:hidden">
+			<MenuItem className="flex items-center gap-2 font-medium text-blue-gray-900 lg:hidden hover:drop-shadow-purple-glow">
 				<Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />{" "}
 				Pages{" "}
 			</MenuItem>
@@ -214,34 +216,28 @@ const navListItems = [
 ];
 
 //large screen horizontal menu bar [pages, account, docs]
-
 function NavList() {
 	return (
 		<ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
 			<NavListMenu />
-			{navListItems.map(({ label, icon, path }) => (
-				<Typography
-					key={label}
-					as="a"
-					href="#"
-					variant="small"
-					color="gray"
-					className="font-medium text-blue-gray-500"
-				>
-					<MenuItem className="flex items-center gap-2 lg:rounded-full">
-						{React.createElement(icon, {
-							className: "h-[18px] w-[18px]",
-						})}{" "}
-						<span className="">
-							<NavLink
-								to={path}
-								className="text-gray-900"
-							>
-								{label}
-							</NavLink>
-						</span>
-					</MenuItem>
-				</Typography>
+			{navListItems.map(({ label, icon, path }, key) => (
+				<NavLink to={path} key={key}>
+					<Typography
+						key={label}
+						as="a"
+						href="#"
+						variant="small"
+						color="gray"
+						className="font-medium text-blue-gray-500 hover:drop-shadow-purple-glow"
+					>
+						<MenuItem className="flex items-center gap-2 lg:rounded-full">
+							{React.createElement(icon, {
+								className: "h-[18px] w-[18px]",
+							})}{" "}
+							<span className="text-gray-900">{label}</span>
+						</MenuItem>
+					</Typography>
+				</NavLink>
 			))}
 		</ul>
 	);
@@ -285,9 +281,7 @@ export function ComplexNavbar() {
 					<Bars2Icon className="h-6 w-6" />
 				</IconButton>
 				<div className="flex gap-2">
-					<Button size="sm" variant="text">
-						<span>Log In</span>
-					</Button>
+					<LoginButton></LoginButton>
 					<ProfileMenu />
 				</div>
 			</div>

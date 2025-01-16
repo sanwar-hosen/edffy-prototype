@@ -27,6 +27,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { NavLink } from "react-router";
 import { LoginButton } from "../LoginButton/LoginButton";
+
 // profile menu component
 const profileMenuItems = [
 	{
@@ -62,12 +63,12 @@ function ProfileMenu() {
 				<Button
 					variant="text"
 					color="blue-gray"
-					className="flex items-center gap-1 rounded-full py-0.5 pr-0.5 pl-0.5 drop-shadow-lg "
+					className="flex items-center gap-2 rounded-full py-0.5 px-0.5 drop-shadow-lg "
 				>
 					<Avatar
 						variant="circular"
 						size="md"
-						alt="tania andrew"
+						alt="user"
 						className="border border-gray-900 p-0.5"
 						src="./src/assets/image.png"
 					/>
@@ -280,8 +281,8 @@ export function ComplexNavbar() {
 				>
 					<Bars2Icon className="h-6 w-6" />
 				</IconButton>
-				<div className="flex gap-2">
-					<LoginButton></LoginButton>
+				<div className="flex gap-8">
+					<LoginButton />	
 					<ProfileMenu />
 				</div>
 			</div>

@@ -7,13 +7,10 @@ import {
 	Input,
 } from "@material-tailwind/react";
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
-import { handleGoogleLogin } from "../LoginFirebase";
+import Login from "../LoginFirebase";
 
-const toggleGoogle = () => {
-    console.log("buttonnnnn")
-};
 
-export function LoginButton() {
+const LoginButton = () => {
 	const [open, setOpen] = useState(false);
 	const handleOpen = () => setOpen((cur) => !cur);
 	const [passwordShown, setPasswordShown] = useState(false);
@@ -160,7 +157,7 @@ export function LoginButton() {
                                     size="lg"
                                     className="mt-6 flex h-12 items-center justify-center gap-2"
                                     fullWidth
-                                    onClick={ () => toggleGoogle() }
+									onClick={ () => {Login();} }
                                 >
                                     <img
                                         src={ `https://www.material-tailwind.com/logos/logo-google.png` }
@@ -190,3 +187,5 @@ export function LoginButton() {
 		</>
 	);
 }
+
+export default LoginButton;

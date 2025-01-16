@@ -26,29 +26,35 @@ import {
 	Bars2Icon,
 } from "@heroicons/react/24/solid";
 import { NavLink } from "react-router";
-import { LoginButton } from "../LoginButton/LoginButton";
+import LoginButton from "../LoginButton/LoginButton";
+// import { handleGoogleLogin } from "../LoginFirebase";
 
 // profile menu component
 const profileMenuItems = [
 	{
 		label: "My Profile",
 		icon: UserCircleIcon,
+		path:"/my-profile",
 	},
 	{
 		label: "Edit Profile",
 		icon: Cog6ToothIcon,
+		path:"/edit-profile",
 	},
 	{
 		label: "Inbox",
 		icon: InboxArrowDownIcon,
+		path:"/inbox",
 	},
 	{
 		label: "Help",
 		icon: LifebuoyIcon,
+		path:"/help",
 	},
 	{
 		label: "Sign Out",
 		icon: PowerIcon,
+		path:"#",
 	},
 ];
 
@@ -56,7 +62,9 @@ function ProfileMenu() {
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
 	const closeMenu = () => setIsMenuOpen(false);
-
+	// const userdetails = handleGoogleLogin();
+	// console.log(userdetails);
+	
 	return (
 		<Menu open={isMenuOpen} handler={setIsMenuOpen} placement="bottom-end">
 			<MenuHandler>
@@ -70,14 +78,15 @@ function ProfileMenu() {
 						size="md"
 						alt="user"
 						className="border border-gray-900 p-0.5"
-						src="./src/assets/image.png"
+						src="./src/assets/default-user.png"
 					/>
 				</Button>
 			</MenuHandler>
 			<MenuList className="p-1 ">
-				{profileMenuItems.map(({ label, icon }, key) => {
+				{profileMenuItems.map(({ label, icon, path }, key) => {
 					const isLastItem = key === profileMenuItems.length - 1;
 					return (
+						<NavLink to={path} key={key}>
 						<MenuItem
 							key={label}
 							onClick={closeMenu}
@@ -102,6 +111,8 @@ function ProfileMenu() {
 								{label}
 							</Typography>
 						</MenuItem>
+						</NavLink>
+
 					);
 				})}
 			</MenuList>

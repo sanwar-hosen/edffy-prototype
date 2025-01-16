@@ -6,6 +6,8 @@ import "./index.css";
 import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import Community from "./Pages/Community/Community";
+import ProfilePage from "./Pages/ProfilePage/ProfilePage";
+import Profile from "./Pages/Profile/Profile";
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
@@ -14,7 +16,11 @@ ReactDOM.createRoot(root).render(
 			<Route path="/" element={<App />}>
 				<Route index element={<Home />} />
 				<Route path="/About" element={<About />} />
-        <Route path="/Community" element={<Community />} />
+				<Route path="/Community" element={<Community />} />
+			</Route>
+			{/* Profile Route */}
+			<Route path="/" element={<ProfilePage />}>
+				<Route path="/my-profile" element={<Profile />} />
 			</Route>
 		</Routes>
 	</BrowserRouter>

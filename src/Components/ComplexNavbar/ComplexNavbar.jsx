@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import {
 	Navbar,
@@ -27,7 +28,6 @@ import {
 } from "@heroicons/react/24/solid";
 import { NavLink } from "react-router";
 import LoginButton from "../LoginButton/LoginButton";
-// import { handleGoogleLogin } from "../LoginFirebase";
 
 // profile menu component
 const profileMenuItems = [
@@ -255,8 +255,13 @@ function NavList() {
 	);
 }
 
-export function ComplexNavbar() {
+// ---------------------------------
+//--------- Actual navbar ----------
+// ---------------------------------
+
+export function ComplexNavbar({ handleGoogleLogin, user }) {
 	const [isNavOpen, setIsNavOpen] = React.useState(false);
+console.log(user);
 
 	const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
 
@@ -269,7 +274,7 @@ export function ComplexNavbar() {
 
 	return (
 		<Navbar
-			fullWidth="true"
+			fullWidth={true}
 			className="sticky mx-auto max-w-screen p-2  lg:pl-6"
 		>
 			<div className="mx-8 my-2 relative flex items-center justify-between text-blue-gray-900">
@@ -293,8 +298,12 @@ export function ComplexNavbar() {
 					<Bars2Icon className="h-6 w-6" />
 				</IconButton>
 				<div className="flex gap-8">
-					<LoginButton />	
-					<ProfileMenu />
+					{/* navbar google login button */}
+					{ user === null ? (
+						<LoginButton handleGoogleLogin={ handleGoogleLogin } />
+					) : (
+						<ProfileMenu />
+					) }
 				</div>
 			</div>
 			<MobileNav open={isNavOpen} className="overflow-scroll">

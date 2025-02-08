@@ -1,13 +1,14 @@
+// src/App.jsx
 import "./App.css";
 import { ComplexNavbar } from "./Components/ComplexNavbar/ComplexNavbar";
+import LoginPage from "./Components/LoginPage/LoginPage"; // Default import
 import { Outlet } from "react-router";
-import { UserProvider } from "./Context/UserContext";
-import { useState } from "react";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import app from "./firebase/firebase.init";
 
-function App({user, setUser}) {
-
+function App({ user, setUser }) {
+	console.log(user);
+	
 	function handleGoogleLogin() {
 		const auth = getAuth(app);
 		const provider = new GoogleAuthProvider();
@@ -33,14 +34,19 @@ function App({user, setUser}) {
 				console.log(email, errorCode);
 			});
 	}
+
+	// Function to handle logout
+	const handleLogout = () => {
+		setUser(null);
+	};
+
 	return (
 		<>
-			<UserProvider>
-				<ComplexNavbar
-					handleGoogleLogin={handleGoogleLogin} user={user}
-				></ComplexNavbar>
-				<Outlet context={user} />
-			</UserProvider>
+			{ user ? (
+				<>
+					<ComplexNavbar user={ user } handleLogout={ handleLogout } />
+					<Outlet context={ user } />
+				</>) : <LoginPage handleGoogleLogin={ handleGoogleLogin } /> }
 		</>
 	);
 }

@@ -1,3 +1,4 @@
+// src/Components/ComplexNavbar/ComplexNavbar.jsx
 /* eslint-disable react/prop-types */
 import React from "react";
 import {
@@ -27,94 +28,92 @@ import {
 	Bars2Icon,
 } from "@heroicons/react/24/solid";
 import { NavLink } from "react-router";
-import LoginButton from "../LoginButton/LoginButton";
 
 // profile menu component
 const profileMenuItems = [
 	{
 		label: "My Profile",
 		icon: UserCircleIcon,
-		path:"/my-profile",
+		path: "/my-profile",
 	},
 	{
 		label: "Edit Profile",
 		icon: Cog6ToothIcon,
-		path:"/edit-profile",
+		path: "/my-profile/edit",
 	},
 	{
 		label: "Inbox",
 		icon: InboxArrowDownIcon,
-		path:"/inbox",
+		path: "/inbox",
 	},
 	{
 		label: "Help",
 		icon: LifebuoyIcon,
-		path:"/help",
-	},
-	{
-		label: "Sign Out",
-		icon: PowerIcon,
-		path:"#",
+		path: "/help",
 	},
 ];
 
-function ProfileMenu() {
+function ProfileMenu({ user, handleLogout }) {
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
 	const closeMenu = () => setIsMenuOpen(false);
-	// const userdetails = handleGoogleLogin();
-	// console.log(userdetails);
-	
+
 	return (
 		<Menu open={isMenuOpen} handler={setIsMenuOpen} placement="bottom-end">
 			<MenuHandler>
 				<Button
 					variant="text"
 					color="blue-gray"
-					className="flex items-center gap-2 rounded-full py-0.5 px-0.5 drop-shadow-lg "
+					className="flex items-center gap-2 rounded-full py-0.5 px-0.5 "
 				>
 					<Avatar
 						variant="circular"
 						size="md"
 						alt="user"
 						className="border border-gray-900 p-0.5"
-						src="./src/assets/default-user.png"
+						src={ user.photoURL !== undefined ? user?.photoURL : "./src/assets/default-user.png" }
 					/>
+					{/* Made by Sano */}
 				</Button>
 			</MenuHandler>
 			<MenuList className="p-1 ">
 				{profileMenuItems.map(({ label, icon, path }, key) => {
-					const isLastItem = key === profileMenuItems.length - 1;
 					return (
 						<NavLink to={path} key={key}>
-						<MenuItem
-							key={label}
-							onClick={closeMenu}
-							className={`flex hover:shadow-purple-300 hover:shadow-md items-center gap-2 rounded ${
-								isLastItem
-									? "hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
-									: ""
-							}`}
-						>
-							{React.createElement(icon, {
-								className: `h-4 w-4 ${
-									isLastItem ? "text-red-500" : ""
-								}`,
-								strokeWidth: 2,
-							})}
-							<Typography
-								as="span"
-								variant="small"
-								className="font-normal"
-								color={isLastItem ? "red" : "inherit"}
+							<MenuItem
+								onClick={closeMenu}
+								className="flex hover:shadow-purple-300 hover:shadow-md items-center gap-2 rounded"
 							>
-								{label}
-							</Typography>
-						</MenuItem>
+								{React.createElement(icon, {
+									className: "h-4 w-4",
+									strokeWidth: 2,
+								})}
+								<Typography
+									as="span"
+									variant="small"
+									className="font-normal"
+								>
+									{label}
+								</Typography>
+							</MenuItem>
 						</NavLink>
-
 					);
 				})}
+				<MenuItem
+					onClick={handleLogout}
+					className="flex hover:shadow-purple-300 hover:shadow-md items-center gap-2 rounded hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
+				>
+					{React.createElement(PowerIcon, {
+						className: "h-4 w-4 text-red-500",
+						strokeWidth: 2,
+					})}
+					<Typography
+						as="span"
+						variant="small"
+						className="font-normal text-red-500"
+					>
+						Sign Out
+					</Typography>
+				</MenuItem>
 			</MenuList>
 		</Menu>
 	);
@@ -163,7 +162,12 @@ function NavListMenu() {
 		<React.Fragment>
 			<Menu allowHover open={isMenuOpen} handler={setIsMenuOpen}>
 				<MenuHandler>
-					<Typography as="a" href="#" variant="small" className="hover:drop-shadow-purple-glow">
+					<Typography
+						as="a"
+						href="#"
+						variant="small"
+						className="hover:drop-shadow"
+					>
 						<MenuItem className="hidden items-center gap-2 font-bold text-blue-gray-900 lg:flex lg:rounded-full">
 							<Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />
 							<Typography variant="small" className="font-bold">
@@ -185,11 +189,10 @@ function NavListMenu() {
 						shadow={false}
 						variant="gradient"
 						className="col-span-3 grid h-full w-full place-items-center rounded-md"
-						
 					>
 						<RocketLaunchIcon
 							strokeWidth={1}
-							className="h-28 w-28 animate-spin-horizontal hover:animate-none hover:drop-shadow-purple-glow"
+							className="h-28 w-28 animate-spin-horizontal hover:animate-none hover:drop-shadow"
 						/>
 					</Card>
 					<ul className="col-span-4 flex w-full flex-col gap-1">
@@ -197,7 +200,7 @@ function NavListMenu() {
 					</ul>
 				</MenuList>
 			</Menu>
-			<MenuItem className="flex items-center gap-2 font-medium text-blue-gray-900 lg:hidden hover:drop-shadow-purple-glow">
+			<MenuItem className="flex items-center gap-2 font-medium text-blue-gray-900 lg:hidden hover:drop-shadow">
 				<Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />{" "}
 				Pages{" "}
 			</MenuItem>
@@ -230,17 +233,22 @@ const navListItems = [
 //large screen horizontal menu bar [pages, account, docs]
 function NavList() {
 	return (
-		<ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
-			<NavListMenu />
+		<ul className="mt-2 mb-4 flex flex-col gap-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center">
+			{/* <NavListMenu /> */}
 			{navListItems.map(({ label, icon, path }, key) => (
-				<NavLink to={path} key={key}>
+				<NavLink
+					to={path}
+					key={key}
+					className={({ isActive }) =>
+						isActive
+							? "bg-blue-gray-50 bg-opacity-80 text-blue-gray-900 rounded-full"
+							: ""
+					}
+				>
 					<Typography
 						key={label}
-						as="a"
-						href="#"
-						variant="small"
 						color="gray"
-						className="font-medium text-blue-gray-500 hover:drop-shadow-purple-glow"
+						className="font-medium text-blue-gray-500 "
 					>
 						<MenuItem className="flex items-center gap-2 lg:rounded-full">
 							{React.createElement(icon, {
@@ -259,10 +267,8 @@ function NavList() {
 //--------- Actual navbar ----------
 // ---------------------------------
 
-export function ComplexNavbar({ handleGoogleLogin, user }) {
+export function ComplexNavbar({ user, handleLogout }) {
 	const [isNavOpen, setIsNavOpen] = React.useState(false);
-console.log(user);
-
 	const toggleIsNavOpen = () => setIsNavOpen((cur) => !cur);
 
 	React.useEffect(() => {
@@ -275,13 +281,14 @@ console.log(user);
 	return (
 		<Navbar
 			fullWidth={true}
-			className="sticky mx-auto max-w-screen p-2  lg:pl-6"
+			className="sticky top-0 z-10 mx-auto max-w-screen p-2 "
+			blurred={false}
 		>
-			<div className="mx-8 my-2 relative flex items-center justify-between text-blue-gray-900">
+			<div className="mx-6 my-2 relative flex items-center justify-between text-blue-gray-900">
 				<Typography
 					as="a"
 					href="/"
-					className="mr-4 font-inter ml-2 text-3xl cursor-pointer py-1.5 font-extrabold hover:drop-shadow-xl "
+					className=" font-inter text-3xl cursor-pointer py-1.5 font-extrabold hover:drop-shadow-xl "
 				>
 					Edffy
 				</Typography>
@@ -298,12 +305,7 @@ console.log(user);
 					<Bars2Icon className="h-6 w-6" />
 				</IconButton>
 				<div className="flex gap-8">
-					{/* navbar google login button */}
-					{ user === null ? (
-						<LoginButton handleGoogleLogin={ handleGoogleLogin } />
-					) : (
-						<ProfileMenu />
-					) }
+					<ProfileMenu user={user} handleLogout={handleLogout} />
 				</div>
 			</div>
 			<MobileNav open={isNavOpen} className="overflow-scroll">

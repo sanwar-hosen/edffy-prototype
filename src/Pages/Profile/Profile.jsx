@@ -4,7 +4,7 @@ import { useOutletContext } from 'react-router';
 
 
 const Profile = () => {
-    const { user } = useOutletContext;
+    const [user, setUser] = useOutletContext();
     console.log(user);
     
     return (

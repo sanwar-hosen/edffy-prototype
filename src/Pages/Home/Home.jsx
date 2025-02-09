@@ -16,7 +16,9 @@ const HomePageContents = () => {
 
 	return (
 		<>
-			<div className="flex flex-col gap-4">
+			<div className="flex flex-col gap-4 ">
+				<div>
+				</div>
 				{Posts.map((post) => (
 					<Post
 						key={post.id}
@@ -36,8 +38,11 @@ const Home = () => {
 	return (
 		<div className="w-full min-h-screen h-full flex bg-[#f2f4f7]">
 			{/* Left Sidebar: Fixed */ }
-			<div className="w-1/4 my-4 h-full fixed left-0 overflow-y-auto">
+			<div className="w-1/4 my-4 h-full flex  flex-col gap-4 fixed left-0 overflow-y-auto hide-scrollbar">
 				<MainSidebar />
+				<p className="mx-2">^^^ structure is made wait for backend to complete</p>
+				<p className="mx-2">Tags will be dynamic and will be clickable!</p>
+				<p className="mx-2">Create Post section will also be made later. stick with dummy data for a while 🤷‍♂️</p>
 			</div>
 
 			{/* Center Content: Scrollable */ }
@@ -46,7 +51,8 @@ const Home = () => {
 			</div>
 
 			{/* Right Sidebar: Fixed */ }
-			<div className="w-1/4 h-full my-4 fixed right-0 overflow-y-auto hide-scrollbar">
+			<div className="w-1/4 h-full my-4 fixed right-0 overflow-y-auto hide-scrollbar flex flex-col gap-4">
+				<p className="mx-4"> This part Will be made after backend</p>
 				<MainSidebar />
 				<MainSidebar />
 				<MainSidebar />

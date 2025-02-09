@@ -1,2 +1,1 @@
-find . -name '*.js' -or -name '*.jsx' -or -name '*.css' | xargs wc -l | grep 'total'  | awk '{ SUM += 
-$1; print $1} END { print "Total text lines in JSX and JS",SUM }'
+find . -name '*.js' -or -name '*.jsx' -or -name '*.css' | xargs wc -l | grep 'total'  | awk '{ SUM += $1; print $1} END { print "Total text lines in JSX and JS",SUM }'

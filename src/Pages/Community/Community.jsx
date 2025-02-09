@@ -6,8 +6,8 @@ const Community = () => {
 	console.log(user);
 
 	return (
-		<div className="h-screen border flex flex-col items-center border-blue-gray-900 m-8 text-center">
-			<h1 className="font-bold my-4">community</h1>
+		<div className="h-[75vh] rounded-lg border flex flex-col items-center border-blue-gray-900 m-8 text-center">
+			<h1 className="font-bold my-4">community Page</h1>
 			
 		</div>
 	);

@@ -20,9 +20,10 @@ const LoginPage = ({ handleGoogleLogin }) => {
 						color="blue-gray"
 						className="mt-4 "
 					>
-						Sign In
+						Sign In 
 					</Typography>
-					<Typography className="mb-8 text-gray-600  text-[18px]">
+					<p className="font-bold text-orange-600">Please only use GOOGLE for now!</p>
+					<Typography className="mb-8 mt-4 text-gray-600  text-[18px]">
 						Enter your email and password to sign in
 					</Typography>
 					<form
@@ -132,7 +133,7 @@ const LoginPage = ({ handleGoogleLogin }) => {
 									d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
 								></path>
 							</svg>
-							sign in with google
+							Continue with google
 						</Button>
 						<Typography
 							variant="small"

@@ -1,177 +1,202 @@
 [
-    {
-        "id": 1,
-        "userName": "MathMentor",
-        "userPhoto": "https://picsum.photos/id/1027/150/150",
-        "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "postText": "Algebra teaches us to solve equations systematically. We often start with linear equations, expand into polynomials, and eventually master more abstract concepts that underlie advanced math fields"
-    },
-    {
-        "id": 2,
-        "userName": "ChemistryCrusader",
-        "userPhoto": "https://picsum.photos/id/1005/150/150",
-        "image": "https://images.unsplash.com/photo-1628863353691-0071c8c1874c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "postText": "Understanding atomic structures helps predict how elements interact. Delving into reaction types lays the groundwork for experiments in organic and inorganic chemistry"
-    },
-    {
-        "id": 3,
-        "userName": "HistoryExplorer",
-        "userPhoto": "https://picsum.photos/id/1025/150/150",
-        "image": "https://images.unsplash.com/photo-1472173148041-00294f0814a2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "postText": "Examining historical documents reveals how societies evolve. Analyzing primary sources and comparing perspectives leads to a nuanced understanding of changes over time"
-    },
-    {
-        "id": 4,
-        "userName": "BioThinker",
-        "userPhoto": "https://picsum.photos/id/1021/150/150",
-        "image": "https://images.unsplash.com/photo-1623239260654-329189722b4b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "postText": "Biology studies organisms and their environments. Understanding cellular mechanisms, genetics, and ecology is vital for insights into medicine and conservation"
-    },
-    {
-        "id": 5,
-        "userName": "LitCritic",
-        "userPhoto": "https://picsum.photos/id/1022/150/150",
-        "image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "postText": "Literature fosters empathy by revealing diverse perspectives. Close reading and analysis help interpret themes, characters, and cultural contexts"
-    },
-    {
-        "id": 6,
-        "userName": "PhysicsPro",
-        "userPhoto": "https://picsum.photos/id/1011/150/150",
-        "image": "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "postText": "Classical physics starts with Newton’s laws describing motion under forces. These concepts inform our understanding of energy, momentum, and stability in systems"
-    },
-    {
-        "id": 7,
-        "userName": "GeoNavigator",
-        "userPhoto": "https://picsum.photos/id/1023/150/150",
-        "image": "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "postText": "Geography studies earth’s terrain, climates, and societies. Spatial analysis and thematic maps help address global challenges and plan sustainable development"
-    },
-    {
-        "id": 8,
-        "userName": "DataScientist",
-        "userPhoto": "https://picsum.photos/id/1012/150/150",
-        "image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "postText": "Data science involves gathering, cleaning, and analyzing datasets. Machine learning and visualization techniques reveal trends and support data-driven insights"
-    },
-    {
-        "id": 9,
-        "userName": "PhilosophyBrain",
-        "userPhoto": "https://picsum.photos/id/1016/150/150",
-        "image": "https://images.unsplash.com/photo-1620662736427-b8a198f52a4d?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "postText": "Philosophy examines reality, ethics, and knowledge. Debates among rationalists, empiricists, and existentialists sharpen our reasoning and shape our worldview"
-    },
-    {
-        "id": 10,
-        "userName": "CalcScholar",
-        "userPhoto": "https://picsum.photos/id/1019/150/150",
-        "image": "https://plus.unsplash.com/premium_photo-1724266846347-bd10efdd330e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "postText": "Calculus measures changes over continuous intervals through differentiation and integration. These tools are vital for modeling real-world phenomena in science and engineering"
-    },
-    {
-        "id": 11,
-        "userName": "LanguageLover",
-        "userPhoto": "https://picsum.photos/id/1024/150/150",
-        "image": "https://images.unsplash.com/reserve/uZYSV4nuQeyq64azfVIn_15130980706_64134efc6e_o.jpg?q=80&w=1467&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "postText": "Learning languages promotes cultural exchange and personal growth. Immersion, coupled with structured study, accelerates fluency and communication skills"
-    },
-    {
-        "id": 12,
-        "userName": "EconGuru",
-        "userPhoto": "https://picsum.photos/id/1020/150/150",
-        "image": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "postText": "Economics explains how resources are allocated and how incentives shape behavior. Micro and macro concepts address both personal finance and global markets"
-    },
-    {
-        "id": 13,
-        "userName": "ArtAficionado",
-        "userPhoto": "https://picsum.photos/id/1033/150/150",
-        "image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "postText": "Art history is a window into cultural and aesthetic evolution. Studying various movements enriches an appreciation for creativity and visual expression"
-    },
-    {
-        "id": 14,
-        "userName": "ComputerCoder",
-        "userPhoto": "https://picsum.photos/id/1018/150/150",
-        "image": "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "postText": "Computer science involves algorithms, data structures, and software paradigms. Programming automates tasks, enables data processing, and drives tech innovation"
-    },
-    {
-        "id": 15,
-        "userName": "AstronomyAce",
-        "userPhoto": "https://picsum.photos/id/1015/150/150",
-        "image": "https://images.unsplash.com/photo-1504386106331-3e4e71712b38?fit=crop&w=1080&q=80",
-        "postText": "Astronomy explores the cosmos, studying stars, planets, and galaxies. It merges physics and observation to reveal the universe’s vast scale and complexity"
-    },
-    {
-        "id": 16,
-        "userName": "MusicTheory",
-        "userPhoto": "https://picsum.photos/id/1028/150/150",
-        "image": "https://images.unsplash.com/photo-1454922915609-78549ad709bb?fit=crop&w=1080&q=80",
-        "postText": "Music theory examines how melody, harmony, and rhythm create cohesive pieces. Understanding chord progressions and tonal structures enhances performance and composition"
-    },
-    {
-        "id": 17,
-        "userName": "HealthScience",
-        "userPhoto": "https://picsum.photos/id/1017/150/150",
-        "image": "https://images.unsplash.com/photo-1576765607927-22c4779d9e33?fit=crop&w=1080&q=80",
-        "postText": "Health sciences study human anatomy, physiology, and disease prevention. Insights into these areas contribute to better personal and public health practices"
-    },
-    {
-        "id": 18,
-        "userName": "StatGuru",
-        "userPhoto": "https://picsum.photos/id/1042/150/150",
-        "image": "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?fit=crop&w=1080&q=80",
-        "postText": "Statistics uses probability to interpret data, guiding informed decisions. Concepts like confidence intervals and regression are vital tools in research"
-    },
-    {
-        "id": 19,
-        "userName": "CreativeWriter",
-        "userPhoto": "https://picsum.photos/id/1026/150/150",
-        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fit=crop&w=1080&q=80",
-        "postText": "Creative writing blends imagination with craft. Through brainstorming, drafting, and revision, writers produce engaging poems, stories, and articles"
-    },
-    {
-        "id": 20,
-        "userName": "RoboticsBuilder",
-        "userPhoto": "https://picsum.photos/id/1013/150/150",
-        "image": "https://images.unsplash.com/photo-1581091870627-854f87cbd621?fit=crop&w=1080&q=80",
-        "postText": "Robotics integrates mechanical, electrical, and software engineering. Designing functional robots involves iterative testing and problem-solving"
-    },
-    {
-        "id": 21,
-        "userName": "EnviroWatch",
-        "userPhoto": "https://picsum.photos/id/1029/150/150",
-        "image": "https://images.unsplash.com/photo-1562564055-71e051b1e47b?fit=crop&w=1080&q=80",
-        "postText": "Environmental science explores ecosystems and the impact of human activities on nature. Sustainable practices and conservation efforts help maintain ecological balance"
-    },
-    {
-        "id": 22,
-        "userName": "PsychInsights",
-        "userPhoto": "https://picsum.photos/id/1010/150/150",
-        "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?fit=crop&w=1080&q=80",
-        "postText": "Psychology investigates behavior, cognition, and emotion. Understanding mental processes aids in therapies, performance improvement, and personal development"
-    },
-    {
-        "id": 23,
-        "userName": "DramaDocent",
-        "userPhoto": "https://picsum.photos/id/1014/150/150",
-        "image": "https://images.unsplash.com/photo-1515169067865-5387ec356754?fit=crop&w=1080&q=80",
-        "postText": "Drama brings stories to life through performance, costumes, and set design. Studying plays from various eras highlights cultural values and artistic techniques"
-    },
-    {
-        "id": 24,
-        "userName": "FinanceFocus",
-        "userPhoto": "https://picsum.photos/id/1044/150/150",
-        "image": "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?fit=crop&w=1080&q=80",
-        "postText": "Finance examines how individuals and organizations manage capital. Investing, budgeting, and risk assessment are central to economic stability and growth"
-    },
-    {
-        "id": 25,
-        "userName": "EthicsEssentials",
-        "userPhoto": "https://picsum.photos/id/1031/150/150",
-        "image": "https://images.unsplash.com/photo-1542744095-291d1f67b221?fit=crop&w=1080&q=80",
-        "postText": "Ethics explores moral principles shaping personal and societal norms. Evaluating different frameworks encourages critical thinking and compassionate decision-making"
-    }
+	{
+		"id": 1,
+		"userName": "MathMentor",
+		"userPhoto": "https://picsum.photos/id/1027/150/150",
+		"image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"postText": "Algebra teaches us to solve equations systematically. We often start with linear equations, expand into polynomials, and eventually master more abstract concepts that underlie advanced math fields",
+		"tags": ["Mathematics", "Algebra", "Equations"]
+	},
+	{
+		"id": 2,
+		"userName": "ChemistryCrusader",
+		"userPhoto": "https://picsum.photos/id/1005/150/150",
+		"image": "https://images.unsplash.com/photo-1628863353691-0071c8c1874c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"postText": "Understanding atomic structures helps predict how elements interact. Delving into reaction types lays the groundwork for experiments in organic and inorganic chemistry",
+		"tags": ["Chemistry", "Atoms", "Reactions"]
+	},
+	{
+		"id": 3,
+		"userName": "HistoryExplorer",
+		"userPhoto": "https://picsum.photos/id/1025/150/150",
+		"image": "https://images.unsplash.com/photo-1472173148041-00294f0814a2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"postText": "Examining historical documents reveals how societies evolve. Analyzing primary sources and comparing perspectives leads to a nuanced understanding of changes over time",
+		"tags": ["History", "Primary Sources", "Society"]
+	},
+	{
+		"id": 4,
+		"userName": "BioThinker",
+		"userPhoto": "https://picsum.photos/id/1021/150/150",
+		"image": "https://images.unsplash.com/photo-1623239260654-329189722b4b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"postText": "Biology studies organisms and their environments. Understanding cellular mechanisms, genetics, and ecology is vital for insights into medicine and conservation",
+		"tags": ["Biology", "Genetics", "Ecology"]
+	},
+	{
+		"id": 5,
+		"userName": "LitCritic",
+		"userPhoto": "https://picsum.photos/id/1022/150/150",
+		"image": "https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"postText": "Literature fosters empathy by revealing diverse perspectives. Close reading and analysis help interpret themes, characters, and cultural contexts",
+		"tags": ["Literature", "Reading", "Analysis"]
+	},
+	{
+		"id": 6,
+		"userName": "PhysicsPro",
+		"userPhoto": "https://picsum.photos/id/1011/150/150",
+		"image": "https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"postText": "Classical physics starts with Newton’s laws describing motion under forces. These concepts inform our understanding of energy, momentum, and stability in systems",
+		"tags": ["Physics", "Newton", "Energy"]
+	},
+	{
+		"id": 7,
+		"userName": "GeoNavigator",
+		"userPhoto": "https://picsum.photos/id/1023/150/150",
+		"image": "https://images.unsplash.com/photo-1521295121783-8a321d551ad2?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"postText": "Geography studies earth’s terrain, climates, and societies. Spatial analysis and thematic maps help address global challenges and plan sustainable development",
+		"tags": ["Geography", "Climate", "Mapping"]
+	},
+	{
+		"id": 8,
+		"userName": "DataScientist",
+		"userPhoto": "https://picsum.photos/id/1012/150/150",
+		"image": "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1472&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"postText": "Data science involves gathering, cleaning, and analyzing datasets. Machine learning and visualization techniques reveal trends and support data-driven insights",
+		"tags": ["Data", "Machine Learning", "Analytics"]
+	},
+	{
+		"id": 9,
+		"userName": "PhilosophyBrain",
+		"userPhoto": "https://picsum.photos/id/1016/150/150",
+		"image": "https://images.unsplash.com/photo-1620662736427-b8a198f52a4d?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"postText": "Philosophy examines reality, ethics, and knowledge. Debates among rationalists, empiricists, and existentialists sharpen our reasoning and shape our worldview",
+		"tags": ["Philosophy", "Ethics", "Knowledge"]
+	},
+	{
+		"id": 10,
+		"userName": "CalcScholar",
+		"userPhoto": "https://picsum.photos/id/1019/150/150",
+		"image": "https://plus.unsplash.com/premium_photo-1724266846347-bd10efdd330e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"postText": "Calculus measures changes over continuous intervals through differentiation and integration. These tools are vital for modeling real-world phenomena in science and engineering",
+		"tags": ["Mathematics", "Calculus", "Differentiation"]
+	},
+	{
+		"id": 11,
+		"userName": "LanguageLover",
+		"userPhoto": "https://picsum.photos/id/1024/150/150",
+		"image": "https://images.unsplash.com/reserve/uZYSV4nuQeyq64azfVIn_15130980706_64134efc6e_o.jpg?q=80&w=1467&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"postText": "Learning languages promotes cultural exchange and personal growth. Immersion, coupled with structured study, accelerates fluency and communication skills",
+		"tags": ["Language", "Culture", "Communication"]
+	},
+	{
+		"id": 12,
+		"userName": "EconGuru",
+		"userPhoto": "https://picsum.photos/id/1020/150/150",
+		"image": "https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"postText": "Economics explains how resources are allocated and how incentives shape behavior. Micro and macro concepts address both personal finance and global markets",
+		"tags": ["Economics", "Resources", "Markets"]
+	},
+	{
+		"id": 13,
+		"userName": "ArtAficionado",
+		"userPhoto": "https://picsum.photos/id/1033/150/150",
+		"image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"postText": "Art history is a window into cultural and aesthetic evolution. Studying various movements enriches an appreciation for creativity and visual expression",
+		"tags": ["Art", "Evolution", "Creativity"]
+	},
+	{
+		"id": 14,
+		"userName": "ComputerCoder",
+		"userPhoto": "https://picsum.photos/id/1018/150/150",
+		"image": "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"postText": "Computer science involves algorithms, data structures, and software paradigms. Programming automates tasks, enables data processing, and drives tech innovation",
+		"tags": ["Computer Science", "Programming", "Algorithms"]
+	},
+	{
+		"id": 15,
+		"userName": "AstronomyAce",
+		"userPhoto": "https://picsum.photos/id/1015/150/150",
+		"image": "https://images.unsplash.com/photo-1504386106331-3e4e71712b38?fit=crop&w=1080&q=80",
+		"postText": "Astronomy explores the cosmos, studying stars, planets, and galaxies. It merges physics and observation to reveal the universe’s vast scale and complexity",
+		"tags": ["Astronomy", "Stars", "Cosmos"]
+	},
+	{
+		"id": 16,
+		"userName": "MusicTheory",
+		"userPhoto": "https://picsum.photos/id/1028/150/150",
+		"image": "https://images.unsplash.com/photo-1454922915609-78549ad709bb?fit=crop&w=1080&q=80",
+		"postText": "Music theory examines how melody, harmony, and rhythm create cohesive pieces. Understanding chord progressions and tonal structures enhances performance and composition",
+		"tags": ["Music", "Melody", "Harmony"]
+	},
+	{
+		"id": 17,
+		"userName": "HealthScience",
+		"userPhoto": "https://picsum.photos/id/1017/150/150",
+		"image": "https://images.unsplash.com/photo-1576765607927-22c4779d9e33?fit=crop&w=1080&q=80",
+		"postText": "Health sciences study human anatomy, physiology, and disease prevention. Insights into these areas contribute to better personal and public health practices",
+		"tags": ["Health", "Anatomy", "Prevention"]
+	},
+	{
+		"id": 18,
+		"userName": "StatGuru",
+		"userPhoto": "https://picsum.photos/id/1042/150/150",
+		"image": "https://images.unsplash.com/photo-1552332386-f8dd00dc2f85?fit=crop&w=1080&q=80",
+		"postText": "Statistics uses probability to interpret data, guiding informed decisions. Concepts like confidence intervals and regression are vital tools in research",
+		"tags": ["Statistics", "Probability", "Data"]
+	},
+	{
+		"id": 19,
+		"userName": "CreativeWriter",
+		"userPhoto": "https://picsum.photos/id/1026/150/150",
+		"image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fit=crop&w=1080&q=80",
+		"postText": "Creative writing blends imagination with craft. Through brainstorming, drafting, and revision, writers produce engaging poems, stories, and articles",
+		"tags": ["Writing", "Creativity", "Literature"]
+	},
+	{
+		"id": 20,
+		"userName": "RoboticsBuilder",
+		"userPhoto": "https://picsum.photos/id/1013/150/150",
+		"image": "https://images.unsplash.com/photo-1581091870627-854f87cbd621?fit=crop&w=1080&q=80",
+		"postText": "Robotics integrates mechanical, electrical, and software engineering. Designing functional robots involves iterative testing and problem-solving",
+		"tags": ["Robotics", "Engineering", "Design"]
+	},
+	{
+		"id": 21,
+		"userName": "EnviroWatch",
+		"userPhoto": "https://picsum.photos/id/1029/150/150",
+		"image": "https://images.unsplash.com/photo-1562564055-71e051b1e47b?fit=crop&w=1080&q=80",
+		"postText": "Environmental science explores ecosystems and the impact of human activities on nature. Sustainable practices and conservation efforts help maintain ecological balance",
+		"tags": ["Environment", "Ecosystems", "Sustainability"]
+	},
+	{
+		"id": 22,
+		"userName": "PsychInsights",
+		"userPhoto": "https://picsum.photos/id/1010/150/150",
+		"image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?fit=crop&w=1080&q=80",
+		"postText": "Psychology investigates behavior, cognition, and emotion. Understanding mental processes aids in therapies, performance improvement, and personal development",
+		"tags": ["Psychology", "Behavior", "Cognition"]
+	},
+	{
+		"id": 23,
+		"userName": "DramaDocent",
+		"userPhoto": "https://picsum.photos/id/1014/150/150",
+		"image": "https://images.unsplash.com/photo-1515169067865-5387ec356754?fit=crop&w=1080&q=80",
+		"postText": "Drama brings stories to life through performance, costumes, and set design. Studying plays from various eras highlights cultural values and artistic techniques",
+		"tags": ["Drama", "Theatre", "Performance"]
+	},
+	{
+		"id": 24,
+		"userName": "FinanceFocus",
+		"userPhoto": "https://picsum.photos/id/1044/150/150",
+		"image": "https://images.unsplash.com/photo-1444653614773-995cb1ef9efa?fit=crop&w=1080&q=80",
+		"postText": "Finance examines how individuals and organizations manage capital. Investing, budgeting, and risk assessment are central to economic stability and growth",
+		"tags": ["Finance", "Capital", "Investing"]
+	},
+	{
+		"id": 25,
+		"userName": "EthicsEssentials",
+		"userPhoto": "https://picsum.photos/id/1031/150/150",
+		"image": "https://images.unsplash.com/photo-1542744095-291d1f67b221?fit=crop&w=1080&q=80",
+		"postText": "Ethics explores moral principles shaping personal and societal norms. Evaluating different frameworks encourages critical thinking and compassionate decision-making",
+		"tags": ["Ethics", "Morality", "Decision-making"]
+	}
 ]

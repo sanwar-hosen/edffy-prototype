@@ -8,7 +8,7 @@ import app from "./firebase/firebase.init";
 
 function App({ user, setUser }) {
 	console.log(user);
-	
+
 	function handleGoogleLogin() {
 		const auth = getAuth(app);
 		const provider = new GoogleAuthProvider();
@@ -42,11 +42,14 @@ function App({ user, setUser }) {
 
 	return (
 		<>
-			{ user ? (
+			{user ? (
 				<>
-					<ComplexNavbar user={ user } handleLogout={ handleLogout } />
-					<Outlet context={ user } />
-				</>) : <LoginPage handleGoogleLogin={ handleGoogleLogin } /> }
+					<ComplexNavbar user={user} handleLogout={handleLogout} />
+					<Outlet context={user} />
+				</>
+			) : (
+				<LoginPage handleGoogleLogin={handleGoogleLogin} />
+			)}
 		</>
 	);
 }

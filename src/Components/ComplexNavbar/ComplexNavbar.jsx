@@ -70,7 +70,7 @@ function ProfileMenu({ user, handleLogout }) {
 						size="md"
 						alt="user"
 						className="border border-gray-900 p-0.5"
-						src={ user.photoURL !== undefined ? user?.photoURL : "./src/assets/default-user.png" }
+						src={ user?.photoURL !== undefined ? user?.photoURL : "./src/assets/default-user.png" }
 					/>
 					{/* Made by Sano */}
 				</Button>

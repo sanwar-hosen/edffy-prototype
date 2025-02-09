@@ -1,3 +1,20 @@
+/* scrollbar css */
+
+.hide-scrollbar {
+    scrollbar-width: none;
+    /* For Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Edge */
+}
+
+
+
+
+
+
 /* HTML: <div class="loader"></div>
 .loader {
     width: 50px;

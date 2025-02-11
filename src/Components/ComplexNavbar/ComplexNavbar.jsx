@@ -1,4 +1,3 @@
-// src/Components/ComplexNavbar/ComplexNavbar.jsx
 /* eslint-disable react/prop-types */
 import React from "react";
 import {
@@ -28,7 +27,7 @@ import {
 	Bars2Icon,
 } from "@heroicons/react/24/solid";
 import { NavLink } from "react-router";
-
+import navbarlogo from "../../assets/logo/Logo v2.0.png"
 // profile menu component
 const profileMenuItems = [
 	{
@@ -288,9 +287,9 @@ export function ComplexNavbar({ user, handleLogout }) {
 				<Typography
 					as="a"
 					href="/"
-					className=" font-inter text-3xl cursor-pointer py-1.5 font-extrabold hover:drop-shadow-xl "
+					className=" font-inter text-3xl cursor-pointer py-1.5 font-extrabold hover:drop-shadow-lg"
 				>
-					Edffy
+					<img src={ navbarlogo } alt="Edffy Logo" className="max-w-28"/>
 				</Typography>
 				<div className="hidden lg:block">
 					<NavList />

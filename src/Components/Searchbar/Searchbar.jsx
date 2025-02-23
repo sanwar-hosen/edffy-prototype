@@ -32,7 +32,7 @@ export default function SearchBar() {
         <div className={ `relative `}>
 			<button
 				onClick={toggleExpanded}
-                className="focus:outline-none flex items-center "
+                className="focus:outline-hidden flex items-center "
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"

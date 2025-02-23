@@ -47,7 +47,7 @@ const EditProfile = () => {
 							labelProps={{
 								className: "hidden",
 							}}
-							className="!border !border-gray-300 bg-white text-gray-900 ring-4 ring-transparent placeholder:text-gray-500 placeholder:opacity-100 focus:!border-gray-900 focus:!border-t-gray-900"
+							className="border! border-gray-300! bg-white text-gray-900 ring-4 ring-transparent placeholder:text-gray-500 placeholder:opacity-100 focus:border-gray-900! focus:border-t-gray-900!"
 							value={user.displayName}
 						/>
 					</div>
@@ -66,7 +66,7 @@ const EditProfile = () => {
 							labelProps={{
 								className: "hidden",
 							}}
-							className="border-t-blue-gray-200 aria-[expanded=true]:border-t-primary"
+							className="border-t-blue-gray-200 aria-expanded:border-t-primary"
 						>
 							<Option>Male</Option>
 							<Option>Female</Option>
@@ -104,7 +104,7 @@ const EditProfile = () => {
 										caption:
 											"flex justify-center py-2 mb-4 relative items-center",
 										caption_label:
-											"text-sm !font-medium text-gray-900",
+											"text-sm font-medium! text-gray-900",
 										nav: "flex items-center",
 										nav_button:
 											"h-6 w-6 bg-transparent hover:bg-blue-gray-50 p-1 rounded-md transition-colors duration-300",
@@ -113,12 +113,12 @@ const EditProfile = () => {
 										nav_button_next: "absolute right-1.5",
 										table: "w-full border-collapse",
 										head_row:
-											"flex !font-medium text-gray-900",
+											"flex font-medium! text-gray-900",
 										head_cell:
-											"m-0.5 w-9 !font-normal text-sm",
+											"m-0.5 w-9 font-normal! text-sm",
 										row: "flex w-full mt-2",
 										cell: "text-gray-600 rounded-md h-9 w-9 text-center text-sm p-0 m-0.5 relative [&:has([aria-selected].day-range-end)]:rounded-r-md [&:has([aria-selected].day-outside)]:bg-gray-900/20 [&:has([aria-selected].day-outside)]:text-white [&:has([aria-selected])]:bg-gray-900/50 first:[&:has([aria-selected])]:rounded-l-md last:[&:has([aria-selected])]:rounded-r-md focus-within:relative focus-within:z-20",
-										day: "h-9 w-9 p-0 !font-normal",
+										day: "h-9 w-9 p-0 font-normal!",
 										day_range_end: "day-range-end",
 										day_selected:
 											"rounded-md bg-gray-900 text-white hover:bg-gray-900 hover:text-white focus:bg-gray-900 focus:text-white",
@@ -161,7 +161,7 @@ const EditProfile = () => {
 							labelProps={{
 								className: "hidden",
 							}}
-							className="border-t-blue-gray-200 aria-[expanded=true]:border-t-primary"
+							className="border-t-blue-gray-200 aria-expanded:border-t-primary"
 						>
 							<Option>1</Option>
 							<Option>2</Option>
@@ -208,7 +208,7 @@ const EditProfile = () => {
 							labelProps={{
 								className: "hidden",
 							}}
-							className="border-t-blue-gray-200 aria-[expanded=true]:border-t-primary"
+							className="border-t-blue-gray-200 aria-expanded:border-t-primary"
 						>
 							<Option>2022</Option>
 							<Option>2021</Option>
@@ -231,7 +231,7 @@ const EditProfile = () => {
 							labelProps={{
 								className: "hidden",
 							}}
-							className="!border !border-gray-300 bg-white text-gray-900 ring-4 ring-transparent placeholder:text-gray-500 placeholder:opacity-100 focus:!border-gray-900 focus:!border-t-gray-900"
+							className="border! border-gray-300! bg-white text-gray-900 ring-4 ring-transparent placeholder:text-gray-500 placeholder:opacity-100 focus:border-gray-900! focus:border-t-gray-900!"
 							value={user?.email}
 						/>
 					</div>

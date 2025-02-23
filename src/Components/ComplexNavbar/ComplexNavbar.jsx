@@ -84,7 +84,7 @@ function ProfileMenu({ user, handleLogout }) {
 						<NavLink to={path} key={key}>
 							<MenuItem
 								onClick={closeMenu}
-								className="flex hover:shadow-purple-300 hover:shadow-md items-center gap-2 rounded"
+								className="flex hover:shadow-purple-300 hover:shadow-md items-center gap-2 rounded-xs"
 							>
 								{React.createElement(icon, {
 									className: "h-4 w-4",
@@ -103,7 +103,7 @@ function ProfileMenu({ user, handleLogout }) {
 				})}
 				<MenuItem
 					onClick={handleLogout}
-					className="flex hover:shadow-purple-300 hover:shadow-md items-center gap-2 rounded hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
+					className="flex hover:shadow-purple-300 hover:shadow-md items-center gap-2 rounded-xs hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
 				>
 					{React.createElement(PowerIcon, {
 						className: "h-4 w-4 text-red-500",
@@ -169,7 +169,7 @@ function NavListMenu() {
 						as="a"
 						href="#"
 						variant="small"
-						className="hover:drop-shadow"
+						className="hover:drop-shadow-xs"
 					>
 						<MenuItem className="hidden items-center gap-2 font-bold text-blue-gray-900 lg:flex lg:rounded-full">
 							<Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />
@@ -195,7 +195,7 @@ function NavListMenu() {
 					>
 						<RocketLaunchIcon
 							strokeWidth={1}
-							className="h-28 w-28 animate-spin-horizontal hover:animate-none hover:drop-shadow"
+							className="h-28 w-28 animate-spin-horizontal hover:animate-none hover:drop-shadow-xs"
 						/>
 					</Card>
 					<ul className="col-span-4 flex w-full flex-col gap-1">
@@ -203,7 +203,7 @@ function NavListMenu() {
 					</ul>
 				</MenuList>
 			</Menu>
-			<MenuItem className="flex items-center gap-2 font-medium text-blue-gray-900 lg:hidden hover:drop-shadow">
+			<MenuItem className="flex items-center gap-2 font-medium text-blue-gray-900 lg:hidden hover:drop-shadow-xs">
 				<Square3Stack3DIcon className="h-[18px] w-[18px] text-blue-gray-500" />{" "}
 				Pages{" "}
 			</MenuItem>

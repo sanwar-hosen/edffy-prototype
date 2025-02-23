@@ -46,7 +46,7 @@ const LoginPage = ({ handleGoogleLogin }) => {
 								placeholder="Email Address"
 								autoComplete="username"
 								required
-								className="!border !border-gray-300 bg-white text-gray-900 ring-4 ring-transparent placeholder:text-gray-500 placeholder:opacity-100 focus:!border-gray-900 focus:!border-t-gray-900 "
+								className="border! border-gray-300! bg-white text-gray-900 ring-4 ring-transparent placeholder:text-gray-500 placeholder:opacity-100 focus:border-gray-900! focus:border-t-gray-900! "
 								labelProps={{
 									className: "hidden",
 								}}
@@ -69,7 +69,7 @@ const LoginPage = ({ handleGoogleLogin }) => {
 								type={passwordShown ? "text" : "password"}
 								autoComplete="current-password"
 								required
-								className="!border !border-gray-300 bg-white text-gray-900 ring-4 ring-transparent placeholder:text-gray-500 placeholder:opacity-100 focus:!border-gray-900 focus:!border-t-gray-900 "
+								className="border! border-gray-300! bg-white text-gray-900 ring-4 ring-transparent placeholder:text-gray-500 placeholder:opacity-100 focus:border-gray-900! focus:border-t-gray-900! "
 								labelProps={{
 									className: "hidden",
 								}}
@@ -87,7 +87,7 @@ const LoginPage = ({ handleGoogleLogin }) => {
 								}
 							/>
 						</div>
-						<div className="!mt-4 flex justify-end">
+						<div className="mt-4! flex justify-end">
 							<Typography
 								as="a"
 								href="#"
@@ -144,7 +144,7 @@ const LoginPage = ({ handleGoogleLogin }) => {
 						<Typography
 							variant="small"
 							color="gray"
-							className="!mt-4 text-center font-normal"
+							className="mt-4! text-center font-normal"
 						>
 							Not registered?{" "}
 							<a href="signup" className="font-medium text-gray-900">

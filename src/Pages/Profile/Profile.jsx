@@ -17,7 +17,7 @@ const Profile = () => {
 
 	return (
 		<div className="flex items-center justify-center h-[85vh] bg-[#f2f4f7]">
-		<div className="p-4 max-w-screen-sm mx-auto bg-white rounded-md shadow-md">
+		<div className="p-4 max-w-(--breakpoint-sm) mx-auto bg-white rounded-md shadow-md">
 			<div className="flex items-center gap-8">
 
 				{/* Left: Profile Pic, Name, Username, Bio */ }

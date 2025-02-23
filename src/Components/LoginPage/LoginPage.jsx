@@ -5,6 +5,7 @@ import {
 	Input,
 } from "@material-tailwind/react";
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
+import SearchBar from "../Searchbar/Searchbar";
 
 const LoginPage = ({ handleGoogleLogin }) => {
 
@@ -26,6 +27,7 @@ const LoginPage = ({ handleGoogleLogin }) => {
 					<Typography className="mb-8 mt-4 text-gray-600  text-[18px]">
 						Enter your email and password to sign in
 					</Typography>
+					
 					<form
 						action="#"
 						className="mx-auto max-w-[24rem] text-left"
@@ -42,6 +44,8 @@ const LoginPage = ({ handleGoogleLogin }) => {
 							<Input
 								type="email"
 								placeholder="Email Address"
+								autoComplete="username"
+								required
 								className="!border !border-gray-300 bg-white text-gray-900 ring-4 ring-transparent placeholder:text-gray-500 placeholder:opacity-100 focus:!border-gray-900 focus:!border-t-gray-900 "
 								labelProps={{
 									className: "hidden",
@@ -62,6 +66,9 @@ const LoginPage = ({ handleGoogleLogin }) => {
 							</label>
 							<Input
 								placeholder="Password"
+								type={passwordShown ? "text" : "password"}
+								autoComplete="current-password"
+								required
 								className="!border !border-gray-300 bg-white text-gray-900 ring-4 ring-transparent placeholder:text-gray-500 placeholder:opacity-100 focus:!border-gray-900 focus:!border-t-gray-900 "
 								labelProps={{
 									className: "hidden",
@@ -69,7 +76,6 @@ const LoginPage = ({ handleGoogleLogin }) => {
 								containerProps={{
 									className: "min-w-[100px]",
 								}}
-								type={passwordShown ? "text" : "password"}
 								icon={
 									<i onClick={togglePasswordVisiblity}>
 										{passwordShown ? (
@@ -141,7 +147,7 @@ const LoginPage = ({ handleGoogleLogin }) => {
 							className="!mt-4 text-center font-normal"
 						>
 							Not registered?{" "}
-							<a href="#" className="font-medium text-gray-900">
+							<a href="signup" className="font-medium text-gray-900">
 								Create account
 							</a>
 						</Typography>

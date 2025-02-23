@@ -17,9 +17,9 @@ const Post = ({ name, userimg, posttext, img, tags }) => {
 				</div>
 				{/* Post text or desc */}
 				<div>
-					<p className="text-justify px-2 py-4">{posttext}</p>
+					<p className=" px-2 py-4">{posttext}</p>
 				</div>
-				<div className="flex gap-2 pb-4 px-2 flex-wrap">
+				<div className="flex gap-2 pb-4 px-2 flex-wrap"> 
 					{tags.map((tag, i) => (
 						<Chip
 							key={i}

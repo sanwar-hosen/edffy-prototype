@@ -10,6 +10,7 @@ import Community from "./Pages/Community/Community";
 import ProfilePage from "./Pages/ProfilePage/ProfilePage";
 import Profile from "./Pages/Profile/Profile";
 import EditProfile from "./Pages/Profile/EditProfile";
+import SignUp from "./Components/SignUp/SignUp";
 
 function MainRoutes() {
 	const [user, setUser] = useState(null);
@@ -95,6 +96,11 @@ function MainRoutes() {
 						}
 					/>
 				</Route>
+				{/* SignUp Route */}
+				<Route
+					path="signup"
+					element={ !user ? <SignUp /> : <Navigate to="/" replace /> }
+				/>
 			</Routes>
 		</BrowserRouter>
 	);

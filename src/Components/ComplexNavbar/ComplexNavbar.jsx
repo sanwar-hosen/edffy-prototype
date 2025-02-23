@@ -28,6 +28,10 @@ import {
 } from "@heroicons/react/24/solid";
 import { NavLink } from "react-router";
 import navbarlogo from "../../assets/logo/Logo v2.0.png"
+import "./ComplexNavbar.css"
+import SearchBar from "../Searchbar/Searchbar";
+
+
 // profile menu component
 const profileMenuItems = [
 	{
@@ -303,7 +307,8 @@ export function ComplexNavbar({ user, handleLogout }) {
 				>
 					<Bars2Icon className="h-6 w-6" />
 				</IconButton>
-				<div className="flex gap-8">
+				<div className="flex gap-4 items-center">
+					<SearchBar></SearchBar>
 					<ProfileMenu user={user} handleLogout={handleLogout} />
 				</div>
 			</div>

@@ -1,6 +1,7 @@
-#Project Edffy
+# Project Edffy
 
 
-##To Do
+## To Do
 
--[ ] To Shift from Material Tailwind to flowbite due to tailwind compatibility issue.
++ To Shift from Material Tailwind to flowbite due to tailwind compatibility issue.
++ etc...

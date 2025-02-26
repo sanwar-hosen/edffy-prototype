@@ -3,5 +3,5 @@
 
 ## To Do
 
-+ To Shift from Material Tailwind to flowbite due to tailwind compatibility issue.
-+ etc...
+- [ ] To Shift from Material Tailwind to flowbite due to tailwind compatibility issue.
+- [ ] etc...

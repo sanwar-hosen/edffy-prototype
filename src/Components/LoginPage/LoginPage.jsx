@@ -14,7 +14,7 @@ const LoginPage = ({ handleGoogleLogin }) => {
 
 	return (
 		<>
-			<section className="grid text-center items-center p-4">
+			<section className="grid text-center items-center p-4 bg-primary-light">
 				<div>
 					<Typography
 						variant="h3"

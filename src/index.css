@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap')
 layer(base);
 
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @config '../tailwind.config.js';
 
@@ -44,6 +44,16 @@ layer(base);
 * {
   font-family: 'Rubik';
 }
+/* Custom Themes */
+
+@theme{
+  --color-primary: #00804E;
+  --color-primary-gray: #6C757D;
+  --color-primary-mid-dark: #005e3a;
+  --color-primary-dark: #003c25;
+  --color-primary-light: #e5fff5;
+}
+
 
 /* loader spinner animation */
 .loader {

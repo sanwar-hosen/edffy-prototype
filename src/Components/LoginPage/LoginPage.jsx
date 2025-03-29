@@ -1,117 +1,90 @@
 import { useState } from "react";
-import {
-	Button,
-	Typography,
-	Input,
-} from "@material-tailwind/react";
+import { Button, Label, TextInput } from "flowbite-react";
 import { EyeSlashIcon, EyeIcon } from "@heroicons/react/24/solid";
-import SearchBar from "../Searchbar/Searchbar";
 
 const LoginPage = ({ handleGoogleLogin }) => {
-
 	const [passwordShown, setPasswordShown] = useState(false);
-	const togglePasswordVisiblity = () => setPasswordShown((cur) => !cur);
-
+	const togglePasswordVisibility = () => setPasswordShown((cur) => !cur);
 	return (
 		<>
-			<section className="grid text-center items-center p-4 bg-primary-light">
-				<div>
-					<Typography
-						variant="h3"
-						color="blue-gray"
-						className="mt-4 "
-					>
-						Sign In 
-					</Typography>
-					<p className="font-bold text-orange-600">Please only use GOOGLE for now!</p>
-					<Typography className="mb-8 mt-4 text-gray-600  text-[18px]">
+			<section className="flex text-center w-screen justify-center items-center h-screen  ">
+				<div className="min-w-[24rem]">
+					<h3 className="text-2xl font-bold mt-4">
+						Sign In
+					</h3>
+					{/* <p className="font-bold text-primary">
+						Please only use GOOGLE for now!
+					</p> */}
+					<p className="mb-4 mt-4 text-gray-600 text-lg">
 						Enter your email and password to sign in
-					</Typography>
-					
-					<form
-						action="#"
-						className="mx-auto max-w-[24rem] text-left"
-					>
-						<div className="py-4 ">
-							<label htmlFor="email">
-								<Typography
-									variant="small"
-									className=" font-semibold text-gray-900"
-								>
-									Your Email
-								</Typography>
-							</label>
-							<Input
+					</p>
+					<form className=" max-w-[24rem] text-left">
+						<div className="py-4">
+							<div className="mb-2 block">
+								<Label
+								color=""
+									htmlFor="email"
+									className=""
+								>Your Email</Label>
+							</div>
+							<TextInput
+								color="gray"
+								id="email"
 								type="email"
 								placeholder="Email Address"
+								required
 								autoComplete="username"
-								required
-								className="border! border-gray-300! bg-white text-gray-900 ring-4 ring-transparent placeholder:text-gray-500 placeholder:opacity-100 focus:border-gray-900! focus:border-t-gray-900! "
-								labelProps={{
-									className: "hidden",
-								}}
-								containerProps={{
-									className: "min-w-[100px]",
-								}}
+								className="bg-white border-gray-300 focus:border-gray-900"
 							/>
 						</div>
-						<div className="">
-							<label htmlFor="password">
-								<Typography
-									variant="small"
-									className=" font-semibold text-gray-900"
+
+						<div>
+							<div className="mb-2 block">
+								<Label color=""
+									htmlFor="password"
+								>Password</Label>
+							</div>
+							<div className="relative">
+								<TextInput
+									id="password"
+									type={passwordShown ? "text" : "password"}
+									placeholder="Password"
+									required
+									autoComplete="current-password"
+									className="bg-white border-gray-300 focus:border-gray-900"
+								/>
+								<button
+									type="button"
+									className="absolute inset-y-0 right-0 flex items-center pr-3"
+									onClick={togglePasswordVisibility}
 								>
-									Password
-								</Typography>
-							</label>
-							<Input
-								placeholder="Password"
-								type={passwordShown ? "text" : "password"}
-								autoComplete="current-password"
-								required
-								className="border! border-gray-300! bg-white text-gray-900 ring-4 ring-transparent placeholder:text-gray-500 placeholder:opacity-100 focus:border-gray-900! focus:border-t-gray-900! "
-								labelProps={{
-									className: "hidden",
-								}}
-								containerProps={{
-									className: "min-w-[100px]",
-								}}
-								icon={
-									<i onClick={togglePasswordVisiblity}>
-										{passwordShown ? (
-											<EyeIcon className="h-5 w-5" />
-										) : (
-											<EyeSlashIcon className="h-5 w-5" />
-										)}
-									</i>
-								}
-							/>
+									{passwordShown ? (
+										<EyeIcon className="h-5 w-5 text-gray-500" />
+									) : (
+										<EyeSlashIcon className="h-5 w-5 text-gray-500" />
+									)}
+								</button>
+							</div>
 						</div>
-						<div className="mt-4! flex justify-end">
-							<Typography
-								as="a"
+
+						<div className="mt-4 flex justify-end">
+							<a
 								href="#"
-								color="blue-gray"
-								variant="small"
-								className="font-medium"
+								className="font-medium text-gray hover:underline"
 							>
 								Forgot password
-							</Typography>
+							</a>
 						</div>
-						<Button
-							color="gray"
-							size="lg"
-							className="mt-6"
-							fullWidth
-						>
-							sign in
+
+						<Button className="mt-4 w-full" color="primary">
+							Sign In
 						</Button>
+						
 						{/* Google login button */}
 						<Button
-							variant="outlined"
-							size="lg"
-							className="mt-6 flex h-12 items-center justify-center gap-2"
-							fullWidth
+							color="outline"
+						
+							className="mt-4 w-full "
 							onClick={() => handleGoogleLogin()}
 						>
 							<svg
@@ -141,16 +114,16 @@ const LoginPage = ({ handleGoogleLogin }) => {
 							</svg>
 							Continue with google
 						</Button>
-						<Typography
-							variant="small"
-							color="gray"
-							className="mt-4! text-center font-normal"
-						>
+
+						<p className="mt-4 text-center font-normal text-gray">
 							Not registered?{" "}
-							<a href="signup" className="font-medium text-gray-900">
+							<a
+								href="signup"
+								className="font-medium text-primary hover:underline"
+							>
 								Create account
 							</a>
-						</Typography>
+						</p>
 					</form>
 				</div>
 			</section>

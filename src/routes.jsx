@@ -10,6 +10,8 @@ import "./index.css";
 // import Profile from "./Pages/Profile/Profile";
 // import EditProfile from "./Pages/Profile/EditProfile";
 // import SignUp from "./Components/SignUp/SignUp";
+import customTheme from "./Theme/CustomTheme";
+import { ThemeProvider } from "flowbite-react";
 
 function MainRoutes() {
 	const [user, setUser] = useState(null);
@@ -48,9 +50,13 @@ function MainRoutes() {
 
 	return (
 		<BrowserRouter>
-			<Routes>
-				<Route path="/" element={<App user={user} setUser={setUser} />}>
-					{/* <Route
+		<ThemeProvider theme={customTheme}>
+				<Routes>
+					<Route
+						path="/"
+						element={<App user={user} setUser={setUser} />}
+					>
+						{/* <Route
 						index
 						element={user ? <Home /> : <Navigate to="/" replace />}
 					/>
@@ -69,11 +75,11 @@ function MainRoutes() {
 								<Community />
 							</PrivateRoute>
 						}
-					/>*/}
-				</Route> 
+					/> */}
+					</Route>
 
-				{/* Profile Route */}
-				{/* <Route
+					{/* Profile Route */}
+					{/* <Route
 					path="my-profile"
 					element={<ProfilePage user={user} setUser={setUser} />}
 				>
@@ -97,12 +103,13 @@ function MainRoutes() {
 					/>
 				</Route> */}
 
-				{/* SignUp Route */}
-				{/* <Route
+					{/* SignUp Route */}
+					{/* <Route
 					path="signup"
 					element={!user ? <SignUp /> : <Navigate to="/" replace />}
 				/> */}
-			</Routes>
+				</Routes>
+			</ThemeProvider>
 		</BrowserRouter>
 	);
 }

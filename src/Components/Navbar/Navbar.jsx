@@ -12,7 +12,6 @@ import {
 } from "@heroicons/react/24/solid";
 import navbarlogo from "../../assets/logo/Logo v2.0.png";
 import "./ComplexNavbar.css";
-import { Dropdown } from "flowbite-react";
 
 const profileMenuItems = [
 	{
@@ -71,6 +70,7 @@ const ProfileMenu = ({ user, handleLogout }) => {
 		document.addEventListener("mousedown", handleClickOutside);
 		return () => document.removeEventListener("mousedown", handleClickOutside);
 	}, []);
+console.log(user.photoURL);
 
 
 	return (
@@ -80,40 +80,38 @@ const ProfileMenu = ({ user, handleLogout }) => {
 				className="flex items-center gap-2 rounded-full p-0.5 border border-gray-900"
 			>
 				<img
-					src={ user?.photoURL || "./src/assets/default-user.png" }
+					src={ user?.photoURL || "../assets/default-user.png" }
 					alt="user"
 					className="h-10 w-10 rounded-full object-cover"
 				/>
 			</button>
 
-			{/* Dropdown menu */ }
-			{ isMenuOpen && (
-				<div className="absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 z-50">
-					{ profileMenuItems.map(({ label, icon, path }, key) => (
-						<NavLink to={ path } key={ key } onClick={ () => setIsMenuOpen(false) }>
-							<div className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md hover:shadow-md hover:shadow-purple-300 transition-all">
-								{ React.createElement(icon, {
-									className: "h-4 w-4",
-									strokeWidth: 2,
-								}) }
-								<span className="font-normal">{ label }</span>
-							</div>
-						</NavLink>
-					)) }
+			{/* Dropdown menu - rendered always but hidden with CSS */ }
+			<div className={ `absolute right-0 mt-2 w-36 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 p-1 z-50 transition-opacity duration-200 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}` }>
+				{ profileMenuItems.map(({ label, icon, path }, key) => (
+					<NavLink to={ path } key={ key } onClick={ () => setIsMenuOpen(false) }>
+						<div className="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md hover:shadow-md hover:shadow-purple-300 transition-all">
+							{ React.createElement(icon, {
+								className: "h-4 w-4",
+								strokeWidth: 2,
+							}) }
+							<span className="font-normal">{ label }</span>
+						</div>
+					</NavLink>
+				)) }
 
-					{/* Sign Out Button */ }
-					<div
-						onClick={ () => {
-							setIsMenuOpen(false);
-							handleLogout();
-						} }
-						className="flex items-center gap-2 px-4 py-2 text-sm text-red-500 hover:bg-red-50 rounded-md hover:shadow-md hover:shadow-purple-300 cursor-pointer transition-all"
-					>
-						<ArrowRightOnRectangleIcon className="h-4 w-4 text-red-500" strokeWidth={ 2 } />
-						<span className="font-normal">Sign Out</span>
-					</div>
+				{/* Sign Out Button */ }
+				<div
+					onClick={ () => {
+						setIsMenuOpen(false);
+						handleLogout();
+					} }
+					className="flex items-center gap-2 px-4 py-2 text-sm text-red-500 hover:bg-red-50 rounded-md hover:shadow-md hover:shadow-purple-300 cursor-pointer transition-all"
+				>
+					<ArrowRightOnRectangleIcon className="h-4 w-4 text-red-500" strokeWidth={ 2 } />
+					<span className="font-normal">Sign Out</span>
 				</div>
-			) }
+			</div>
 		</div>
 	);
 };

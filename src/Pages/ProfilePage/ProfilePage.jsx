@@ -1,6 +1,6 @@
 import React from "react";
-import { ComplexNavbar } from "../../Components/ComplexNavbar/ComplexNavbar";
 import { Outlet } from "react-router";
+import Navbar from "../../Components/Navbar/Navbar";
 
 const ProfilePage = ({ user, setUser }) => {
 	console.log(user);
@@ -11,7 +11,7 @@ const ProfilePage = ({ user, setUser }) => {
 	};
 	return (
 		<div>
-			<ComplexNavbar user={user} handleLogout={handleLogout} />
+			<Navbar user={ user } handleLogout={ handleLogout } />
 			<Outlet context={[user, setUser]} />
 		</div>
 	);

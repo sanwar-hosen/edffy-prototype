@@ -70,7 +70,6 @@ const ProfileMenu = ({ user, handleLogout }) => {
 		document.addEventListener("mousedown", handleClickOutside);
 		return () => document.removeEventListener("mousedown", handleClickOutside);
 	}, []);
-console.log(user.photoURL);
 
 
 	return (
@@ -127,7 +126,7 @@ function NavList() {
 					key={ key }
 					className={ ({ isActive }) =>
 						`flex items-center gap-2 px-3 py-2 rounded-full ${isActive
-							? "bg-blue-gray-50 bg-opacity-80 text-blue-gray-900"
+							? "bg-gray bg-opacity-70 text-blue-gray-900"
 							: "text-gray-700 hover:bg-gray-100"
 						}`
 					}

@@ -7,20 +7,20 @@ const LoginPage = ({ handleGoogleLogin }) => {
 	const togglePasswordVisibility = () => setPasswordShown((cur) => !cur);
 	return (
 		<>
-			<section className="flex text-center w-screen justify-center items-center h-screen  ">
-				<div className="min-w-[24rem]">
-					<h3 className="text-2xl font-bold mt-4">
+			<section className="flex lg:bg-[#00804f2a] text-center w-auto justify-center items-center h-screen ">
+				<div className="lg:min-w-[24rem] rounded-xl lg:bg-white py-8 px-4 lg:px-8">
+					<h3 className="text-2xl font-bold ">
 						Sign In
 					</h3>
 					{/* <p className="font-bold text-primary">
 						Please only use GOOGLE for now!
 					</p> */}
 					<p className="mb-4 mt-4 text-gray-600 text-lg">
-						Enter your email and password to sign in
+						Enter your email and password to <span className="whitespace-nowrap">sign in</span>
 					</p>
 					<form className=" max-w-[24rem] text-left">
 						<div className="py-4">
-							<div className="mb-2 block">
+							<div className="block">
 								<Label
 								color=""
 									htmlFor="email"
@@ -39,7 +39,7 @@ const LoginPage = ({ handleGoogleLogin }) => {
 						</div>
 
 						<div>
-							<div className="mb-2 block">
+							<div className=" block">
 								<Label color=""
 									htmlFor="password"
 								>Password</Label>
@@ -67,7 +67,7 @@ const LoginPage = ({ handleGoogleLogin }) => {
 							</div>
 						</div>
 
-						<div className="mt-4 flex justify-end">
+						<div className="mt- flex justify-end">
 							<a
 								href="#"
 								className="font-medium text-gray hover:underline"
@@ -76,7 +76,7 @@ const LoginPage = ({ handleGoogleLogin }) => {
 							</a>
 						</div>
 
-						<Button className="mt-4 w-full" color="primary">
+						<Button className="mt-4 w-full" color="primary" disabled>
 							Sign In
 						</Button>
 						

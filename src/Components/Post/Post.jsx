@@ -1,6 +1,10 @@
-import { Chip } from "@material-tailwind/react";
+import { Badge } from "flowbite-react";
 
 const Post = ({ name, userimg, posttext, img, tags }) => {
+
+
+	console.log(name);
+	
 	return (
 		<div className=" flex flex-col items-center">
 			<div className="border py-4 px-2 rounded-xl max-w-lg bg-white">
@@ -19,16 +23,17 @@ const Post = ({ name, userimg, posttext, img, tags }) => {
 				<div>
 					<p className=" px-2 py-4">{posttext}</p>
 				</div>
-				<div className="flex gap-2 pb-4 px-2 flex-wrap"> 
-					{tags.map((tag, i) => (
-						<Chip
-							key={i}
-							size="sm"
-							variant="outlined"
-							value={`#${tag}`}
+				<div className="flex gap-2 pb-4 px-2 flex-wrap">
+					{ tags.map((tag, i) => (
+						<Badge
+							key={ i }
+							color="outlinedPrimary"
+							size="md"
 							className="rounded-full hover:shadow-lg hover:bg-gray-50"
-						/>
-					))}
+						>
+							#{ tag }
+						</Badge>
+					)) }
 				</div>
 				{/* file attachment */}
 				<div className="px-2">

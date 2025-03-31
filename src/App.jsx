@@ -5,7 +5,6 @@ import {
 	getAuth,
 	GoogleAuthProvider,
 	signInWithPopup,
-	signInWithRedirect
 } from "firebase/auth";
 //the sano
 import app from "./firebase/firebase.init";

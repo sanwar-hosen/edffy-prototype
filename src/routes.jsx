@@ -3,13 +3,13 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import App from "./App";
 import "./index.css";
-// import Home from "./Pages/Home/Home";
-// import About from "./Pages/About/About";
-// import Community from "./Pages/Community/Community";
-// import ProfilePage from "./Pages/ProfilePage/ProfilePage";
-// import Profile from "./Pages/Profile/Profile";
+import Home from "./Pages/Home/Home";
+import About from "./Pages/About/About";
+import Community from "./Pages/Community/Community";
+import ProfilePage from "./Pages/ProfilePage/ProfilePage";
+import Profile from "./Pages/Profile/Profile";
 // import EditProfile from "./Pages/Profile/EditProfile";
-// import SignUp from "./Components/SignUp/SignUp";
+import SignUp from "./Components/SignUp/SignUp";
 import customTheme from "./Theme/CustomTheme";
 import { ThemeProvider } from "flowbite-react";
 
@@ -56,11 +56,11 @@ function MainRoutes() {
 						path="/"
 						element={<App user={user} setUser={setUser} />}
 					>
-						{/* <Route
+						 <Route
 						index
 						element={user ? <Home /> : <Navigate to="/" replace />}
 					/>
-					<Route
+						<Route
 						path="About"
 						element={
 							<PrivateRoute>
@@ -75,11 +75,11 @@ function MainRoutes() {
 								<Community />
 							</PrivateRoute>
 						}
-					/> */}
+					/>
 					</Route>
 
 					{/* Profile Route */}
-					{/* <Route
+					<Route
 					path="my-profile"
 					element={<ProfilePage user={user} setUser={setUser} />}
 				>
@@ -90,7 +90,7 @@ function MainRoutes() {
 								<Profile />
 							</PrivateRoute>
 						}
-					/> */}
+					/>
 
 					{/* Edit Profile Route */}
 					{/* <Route
@@ -100,14 +100,14 @@ function MainRoutes() {
 								<EditProfile />
 							</PrivateRoute>
 						}
-					/>
-				</Route> */}
+					/>*/}
+				</Route> 
 
 					{/* SignUp Route */}
-					{/* <Route
+					<Route
 					path="signup"
 					element={!user ? <SignUp /> : <Navigate to="/" replace />}
-				/> */}
+				/>
 				</Routes>
 			</ThemeProvider>
 		</BrowserRouter>

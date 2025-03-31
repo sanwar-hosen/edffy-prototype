@@ -37,6 +37,39 @@ const customTheme = createTheme({
 			disabled: "opacity-50 cursor-not-allowed",
 		},
 	},
+	badge: {
+		root: {
+			base: "inline-flex items-center font-medium cursor-pointer",
+			color: {
+				primary:
+					"bg-[#00804E] text-white hover:shadow-sm hover:shadow-[#00804f2a]",
+				outlinedGray:
+					"bg-white text-gray-700 border border-gray-300 hover:shadow-sm hover:bg-gray-50",
+				outlinedPrimary:
+					"bg-transparent border border-[#00804E] text-[#00804E] hover:shadow-sm hover:shadow-[#00804f2a]",
+				gray: "bg-gray-100 text-gray-800 border border-gray-200",
+				dark: "bg-gray-900 text-white",
+			},
+			size: {
+				xs: "text-xs px-2 py-0.5",
+				sm: "text-xs px-2.5 py-0.5",
+				md: "text-sm px-3 py-1",
+				lg: "text-sm px-3.5 py-1.5",
+			},
+		},
+		icon: {
+			off: {
+				base: "rounded-lg",
+			},
+			on: {
+				base: "rounded-full", // For pill badges
+			},
+		},
+		defaultVariants: {
+			color: "default",
+			size: "sm",
+		},
+	},
 	// Add  other components (TextInput, etc.) here as needed
 });
 

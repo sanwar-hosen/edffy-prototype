@@ -8,7 +8,8 @@ import CreatePost from "../../Components/CreatePost/CreatePost";
 const HomePageContents = () => {
 	const [Posts, setPosts] = useState([]);
 	// console.log(Posts);
-
+	const [user, setUser] = useOutletContext();
+	
 	useEffect(() => {
 		fetch("./posts.json")
 			.then((res) => res.json())
@@ -18,7 +19,7 @@ const HomePageContents = () => {
 	return (
 		<>
 			<div className="flex flex-col gap-4 ">
-					<CreatePost></CreatePost>
+					<CreatePost user={user}></CreatePost>
 				{/* {Posts.map((post) => (
 					<Post
 						key={ post.id }

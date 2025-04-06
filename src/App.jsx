@@ -50,7 +50,7 @@ function App({ user, setUser }) {
 			{user ? (
 				<>
 					<Navbar user={user} handleLogout={handleLogout} />
-					<Outlet context={user} />
+					<Outlet context={[user, setUser]} />
 				</>
 			) : (
 				<LoginPage handleGoogleLogin={handleGoogleLogin} />

@@ -3,7 +3,6 @@ import { Badge } from "flowbite-react";
 const Post = ({ name, userimg, posttext, img, tags }) => {
 
 
-	console.log(name);
 	
 	return (
 		<div className=" flex flex-col items-center">

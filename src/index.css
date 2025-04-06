@@ -3,3 +3,17 @@
 * {
   font-family: 'Rubik';
 }
+
+* {
+  user-select: text !important; /* Ensure text selection is enabled everywhere */
+}
+
+::selection {
+  background-color: #00804f7c !important; /* Light blue background for selected text */
+  color: #000 !important; /* Black text when selected */
+}
+
+::-moz-selection {
+  background-color: #00804f7c !important; /* Firefox support */
+  color: #000 !important;
+}
